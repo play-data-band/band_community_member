@@ -22,6 +22,10 @@ public class CustomCommunityMemberRepositoryImpl implements CustomCommunityMembe
         if(communityMemberReqeust.getCommunityName() != null){
             updateClause.set(qCommunityMember.communityName, communityMemberReqeust.getCommunityName());
         }
+        System.out.println(communityId);
+        System.out.println(communityMemberReqeust.getCommunityName());
+        System.out.println(communityMemberReqeust.getCommunityImage());
+
         BooleanExpression whereCondition = qCommunityMember.communityId.eq(communityId);
         updateClause.where(whereCondition);
         updateClause.execute();
@@ -47,3 +51,5 @@ public class CustomCommunityMemberRepositoryImpl implements CustomCommunityMembe
         updateClause.execute();
     }
 }
+
+
