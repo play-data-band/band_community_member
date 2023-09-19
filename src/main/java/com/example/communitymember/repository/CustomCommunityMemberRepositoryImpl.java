@@ -35,7 +35,7 @@ public class CustomCommunityMemberRepositoryImpl implements CustomCommunityMembe
     public void updateMemberInCommunityMember(CommunityMemberReqeust communityMemberReqeust, Long memberID) {
         JPAUpdateClause updateClause = queryFactory.update(qCommunityMember);
         if(communityMemberReqeust.getMemberImage() != null){
-            updateClause.set(qCommunityMember.memberImage,communityMemberReqeust.getMemberImage());
+            updateClause.set(qCommunityMember.memberImage, communityMemberReqeust.getMemberImage());
         }
 
         if(communityMemberReqeust.getMemberName() != null){

@@ -19,6 +19,7 @@ public class CommunityMemberController {
     @PostMapping("/{communityId}")
     public void saveCommunityMember(@PathVariable("communityId") Long communityId,
                                     @RequestBody CommunityMemberReqeust communityMemberReqeust){
+        System.out.println(communityMemberReqeust.getCommunityImage());
         communityMemberService.saveCommunityMember(communityMemberReqeust,communityId);
     }
 

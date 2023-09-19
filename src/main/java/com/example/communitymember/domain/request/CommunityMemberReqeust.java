@@ -20,6 +20,7 @@ public class CommunityMemberReqeust {
 
 
     public CommunityMember toEntity(Long communityId){
+        System.out.println(communityId);
         return CommunityMember
                 .builder()
                 .memberId(memberId)
